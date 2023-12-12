@@ -1,0 +1,10 @@
+4. Query SOAL NOMER 4 :
+   SELECT a.id_user, b.username,c.course,c.mentor,c.title FROM usercourse a JOIN users b ON b.id = a.id_user JOIN courses c ON c.id = a.id_course WHERE 1
+5. QUERY SOAL NOMER 5 : 
+   SELECT a.id_user, b.username,c.course,c.mentor,c.title FROM usercourse a JOIN users b ON b.id = a.id_user JOIN courses c ON c.id = a.id_course WHERE c.title LIKE '%S%'
+6. QUERY SOAL NOMER 6
+   SELECT a.id_user, b.username,c.course,c.mentor,c.title FROM usercourse a JOIN users b ON b.id = a.id_user JOIN courses c ON c.id = a.id_course WHERE c.title NOT LIKE '%S%'
+7. QUERY NOMER 7 :
+   SELECT c.course,c.mentor,c.title, COUNT(c.id) as jumlah_peserta FROM usercourse a JOIN users b ON b.id = a.id_user JOIN courses c ON c.id = a.id_course WHERE 1 GROUP BY c.id
+8. QUERY NOMER 8 :
+   SELECT c.mentor,c.title, COUNT(c.id) as jumlah_peserta, COUNT(c.id)*2000000 as total_fee FROM usercourse a JOIN users b ON b.id = a.id_user JOIN courses c ON c.id = a.id_course WHERE 1 GROUP BY c.mentor
